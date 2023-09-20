@@ -1,7 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for
-
-app = Flask(__name__)
-
 from lyricsgenius import Genius
 import re
 import json
@@ -10,8 +7,7 @@ import requests
 accessToken = "dBdNFFsh_ywi-VvikMkPjhpWsdH7kvHX_NLj4vDM07987oCDPwSpDIIIOflEsXX3"
 genius = Genius(accessToken)
 
-
-
+app = Flask(__name__)
 
 @app.route('/')
 def home():
